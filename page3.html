@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="inner-header ">
+    <p class="inner-header__text">Уже совсем скоро Вы узнаете много интересного о своем будущем!</p>
+  </header>
+  <main>
+    <section class="inner-page">
+      <h2 class="inner-page__heading">Укажите свою дату рождения:</h2>
+      <form action="page2.html" class="formSelect">      
+      <div class="wrap-btn">
+        <div class="wrap-select">
+          <select class="select" name="day" id="day">
+            <option value="">День</option>
+            
+          </select>
+        </div>
+        <div class="wrap-select">
+          <select class="select" name="month" id="month" >
+            <option value="">Месяц</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <div class="wrap-select">
+          <select class="select" name="year" id="year">
+            <option value="">Год</option>
+          </select>
+        </div>
+        <button class="button" type="submit">Далее</button>
+        <p class="button__desc">Вопрос 3-5</p>
+      </div>
+    </form>
+    </section>
+  </main>
+  <script src="select.js"></script>
+</body>
+</html>
