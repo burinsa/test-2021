@@ -1145,7 +1145,7 @@ body {
     background-image: url('img/moon111.svg');
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
+    opacity: 1;
   }
 
   .inner-page .button__desc {
