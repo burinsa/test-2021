@@ -10,7 +10,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  
+
   margin: 0 auto;
   font-family: "Roboto", sans-serif ;
   font-style: normal;
@@ -416,7 +416,7 @@ body {
   position: relative;
 }
 
-.wrap-btn::after {
+.inner-page .wrap-btn::after {
   position: absolute;
   content: '';
   width: 52px;
@@ -1135,7 +1135,7 @@ body {
     flex-grow: 2;
   }
 
-  .wrap-btn::after {
+  .inner-page .wrap-btn::after {
     position: absolute;
     content: '';
     width: 92px;
@@ -1342,9 +1342,9 @@ body {
     background-image: url('img/moon-4.svg');
   }
 
-  .wrap-btn::after {
+  /* .wrap-btn::after {
     background-image: none;
-  }
+  } */
 
 
 }
