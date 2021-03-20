@@ -10,7 +10,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  /* max-width: 320px; */
+  
   margin: 0 auto;
   font-family: "Roboto", sans-serif ;
   font-style: normal;
@@ -23,15 +23,11 @@ body {
 
 .main-header {
   margin: 0 auto;
-  /* background-image: url('img/blik-2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 .wrap-header {
   margin: 0 auto;
   padding-top: 14px;
-  background-image: url('/img/blik-2.png');
+  background-image: url('img/blik-2.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -69,7 +65,7 @@ body {
   max-width: 225px;
   min-height: 225px;
   margin: 0 auto;
-  background-image: url('/img/icon1-2.png');
+  background-image: url('img/icon1-2.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -253,7 +249,7 @@ body {
   padding-top: 102px;
   padding-left: 55px;
   padding-right: 55px;
-  background-image: url(img/image\ 7.png);
+  background-image: url('img/image\ 7.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -309,7 +305,7 @@ body {
   height: 62px;
   bottom: -25px;
   left: 0;
-  background-image: url('/img/moon.svg');
+  background-image: url('img/moon.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
