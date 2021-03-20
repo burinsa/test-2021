@@ -1,13 +1,23 @@
 const daySelect = document.querySelector('#day');
-const monthSelect = document.querySelector('#month')
+const monthSelect = document.querySelector('#month');
 const yearSelect = document.querySelector('#year');
 const formSelect = document.querySelector('.formSelect');
 let previousDay;
 
 
+ // @ts-ignore
+ const dateOfBirth = {
+  day: '',
+  month: '',
+  year: ''
+};
+
+
+
+
 
 // @ts-ignore
-populateDays(monthSelect.value)
+populateDays(monthSelect.value);
 populateYears();
 
 function populateYears() {
@@ -53,24 +63,35 @@ function populateDays(month) {
   }
 
   if(previousDay) {
+    // @ts-ignore
     daySelect.value = previousDay;
 
+    // @ts-ignore
     if(daySelect.value === "") {
+      // @ts-ignore
       daySelect.value = previousDay - 1;
     }
 
+    // @ts-ignore
     if(daySelect.value === "") {
+      // @ts-ignore
       daySelect.value = previousDay - 2;
     }
 
+    // @ts-ignore
     if(daySelect.value === "") {
+      // @ts-ignore
       daySelect.value = previousDay - 3;
     }
   }
 }
 
+// @ts-ignore
 daySelect.onchange = function() {
+  // @ts-ignore
   previousDay = daySelect.value;
+  // @ts-ignore
+  
 }
 
 
@@ -78,36 +99,69 @@ daySelect.onchange = function() {
 yearSelect.onchange = function() {
   // @ts-ignore
   populateDays(monthSelect.value);
+  // @ts-ignore
+  
 }
 
 // @ts-ignore
 monthSelect.onchange = function() {
   // @ts-ignore
   populateDays(monthSelect.value);
+  // @ts-ignore
+  
 }
 
+
 formSelect.addEventListener('submit', (evt) => {
-  
+
+  // @ts-ignore
   if (daySelect.value === '') {
     evt.preventDefault();
     daySelect.classList.add('required-select');
   } else {
+    dateOfBirth.day = daySelect.value;
     daySelect.classList.remove('required-select');
   }
 
+  // @ts-ignore
   if (monthSelect.value === '') {
     evt.preventDefault();
     monthSelect.classList.add('required-select');
   } else {
+    dateOfBirth.month = monthSelect.value;
     monthSelect.classList.remove('required-select');
   }
 
+  // @ts-ignore
   if (yearSelect.value === '') {
     evt.preventDefault();
     yearSelect.classList.add('required-select');
   } else {
+    dateOfBirth.year = yearSelect.value;
     yearSelect.classList.remove('required-select');
   }
+
+  console.log(dateOfBirth);
+  // @ts-ignore
+  localStorage.age = getAge();
 }); 
+
+function getAge () {
+  let now = new Date(); //Текущя дата
+  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); //Текущя дата без времени
+  let dob = new Date(dateOfBirth.year, dateOfBirth.month - 1, dateOfBirth.day); //Дата рождения
+  let dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate()); //ДР в текущем году
+  let age; //Возраст
+
+  //Возраст = текущий год - год рождения
+  age = today.getFullYear() - dob.getFullYear();
+  //Если ДР в этом году ещё предстоит, то вычитаем из age один год
+  if (today < dobnow) {
+    age = age-1;
+  }
+  console.log(age)
+  return age;
+}
+
 
 
