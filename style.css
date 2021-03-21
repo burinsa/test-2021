@@ -1621,6 +1621,7 @@ body {
 
   .btn-close {
     width: 310px;
+    margin-bottom: 0;
   }
 }
 
