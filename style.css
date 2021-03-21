@@ -1115,6 +1115,7 @@ body {
   padding: 0;
   margin: 0 auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1136,16 +1137,20 @@ body {
 
   width: 100%;
   overflow-wrap: break-word; 
-  border-bottom: 1px solid #fff; 
-  -webkit-transition-duration: 0.5s; 
-       -o-transition-duration: 0.5s; 
-          transition-duration: 0.5s;
+  border-bottom: 1px solid #fff;
 }
 
 .request-list__item:hover {
   color: #000;
   background-color: #F6C866;
-  
+  -webkit-transition-duration: 0.5s; 
+       -o-transition-duration: 0.5s; 
+          transition-duration: 0.5s;
+}
+
+.btn-close {
+  width: 180px;
+  margin-bottom: 0;
 }
 
 
@@ -1612,6 +1617,10 @@ body {
   .request-list {
     font-size: 25px;
     line-height: 35px;
+  }
+
+  .btn-close {
+    width: 310px;
   }
 }
 

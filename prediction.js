@@ -5,6 +5,12 @@ const prediction = document.querySelector('.prediction');
 const divReq = document.querySelector('.div-req');
 const wrapReq = document.createElement('ul');
 const url = 'https://swapi.dev/api/people/1/';
+const btnclose = document.createElement('button');
+
+btnclose.className = 'button';
+btnclose.classList.add('btn-close');
+btnclose.textContent = 'Скрыть';
+btnclose.addEventListener('click', clearList)
 
 
 // установка завтрашнего числа
@@ -28,11 +34,17 @@ predictionFooter.addEventListener('click', () => {
   }, 5000);
 });
 
+function clearList () {
+  wrapReq.remove();
+  btnclose.remove();
+}
+
 function outputRequest (obj) {  
 
   while (wrapReq.firstChild) {
     wrapReq.removeChild(wrapReq.firstChild);
   }
+
   for(let key in obj) {
     console.log(obj[key])
     let itemReq = document.createElement('li');
@@ -40,8 +52,10 @@ function outputRequest (obj) {
     itemReq.textContent = key + ": " + obj[key]; 
     wrapReq.className = 'request-list';   
     wrapReq.appendChild(itemReq);
+    // wrapReq.append(btnclose);
   }  
   prediction.append(wrapReq);
+  prediction.append(btnclose);
 } 
 
 
