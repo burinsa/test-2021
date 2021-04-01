@@ -1347,9 +1347,13 @@ body {
     background-image: url('img/moon-3.svg');
   }
 
-  /* .footer {
-    display: none;
-  } */
+  .footer__text {
+    width: 488px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
 
   /* Page 2 */
   

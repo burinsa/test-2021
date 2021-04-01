@@ -32,9 +32,9 @@ function showToBlock (block) {
 
 
 footerText.addEventListener('click', () => {
-  footerText.style.height = "30px";
+  footerText.classList.add('footer__text-show');
   setTimeout(() => {    
-    footerText.style.height = "18px";      
+    footerText.classList.remove('footer__text-show');     
   }, 5000);
 });
 
